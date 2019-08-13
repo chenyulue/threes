@@ -10,4 +10,4 @@
 
 * The following is a demo show:
 
-  ![threes](C:\Users\chenyulue\hs\threes\demo.gif)
+  ![threes](https://github.com/chenyulue/threes/blob/master/demo.gifC:\Users\chenyulue\hs\threes\demo.gif)
