@@ -1,0 +1,57 @@
+name:                threes
+version:             0.1.0.0
+github:              "chenyulue/threes"
+license:             BSD3
+author:              "Chenyu Lue"
+maintainer:          "chenyulue@163.com"
+copyright:           "(C) 2019, Chenyu Lue"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/chenyulue/threes#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- random
+- microlens
+- array
+- mtl
+- gloss
+
+library:
+  source-dirs: src
+  exposed-modules: Core
+                 , UI
+                 , Play
+  other-modules: Paths_threes
+
+executables:
+  threes-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - threes
+
+tests:
+  threes-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - threes
